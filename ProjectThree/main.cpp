@@ -1,4 +1,7 @@
 #include "ProduceManager.h"
+
+// Look at the ProduceList.txt choose an item and enter it as a string to test.
+// Menu and UI will be created at a later date. This is just to make sure the logic works
 int main()
 {
 	// File With Producec
