@@ -12,8 +12,9 @@ void ProduceManager::LoadProduce()
 			bool alreadyExist = false;
 			for (auto p : m_produce)
 			{
+				// If the produce already exist
 				if (produceName == p->GetProduceName())
-				{
+				{					
 					alreadyExist = true;
 					p->Increment();
 					break;
@@ -21,12 +22,14 @@ void ProduceManager::LoadProduce()
 			}
 			if (!alreadyExist)
 			{
+				// Create a pointer to the new Produce
 				std::shared_ptr<Produce> produce(new Produce(produceName));
 				m_produce.push_back(produce);
 			}
 		}
 		std::cout << "Produce Loaded" << std::endl;
 	}
+	// File was not found
 	else
 	{
 		std::cout << "The file could not be opened" << std::endl;
@@ -41,6 +44,7 @@ ProduceManager::ProduceManager(std::string& fileName)
 
 const int ProduceManager::Find(std::string& produceName)
 {
+	// Auto is a std::shared_ptr<Produce>
 	for (auto p : m_produce)
 	{
 		if (produceName == p->GetProduceName())

@@ -7,7 +7,6 @@ class Produce
 		int m_produceQuantity = 0;
 	public:
 		Produce(std::string& name);
-		void SetProduceName(std::string& name);
 		void Increment();
 		const std::string& GetProduceName() const;
 		const int GetProduceQuantity() const;

@@ -6,11 +6,6 @@ Produce::Produce(std::string& name)
 	m_produceQuantity = 1;
 }
 
-void Produce::SetProduceName(std::string& name)
-{
-	m_produceName = name;
-}
-
 void Produce::Increment()
 {
 	m_produceQuantity++;
