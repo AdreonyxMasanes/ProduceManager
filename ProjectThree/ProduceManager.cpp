@@ -36,6 +36,16 @@ void ProduceManager::LoadProduce()
 	}
 }
 
+std::string ProduceManager::GetAsteriks(int numOfAsteriks) const
+{
+	std::string asteriks = "";
+	for (int i = 0; i < numOfAsteriks; i++)
+	{
+		asteriks += "*";
+	}
+	return asteriks;
+}
+
 ProduceManager::ProduceManager(std::string& fileName)
 	: m_fileName(fileName)
 {
@@ -53,4 +63,19 @@ const int ProduceManager::Find(std::string& produceName)
 		}
 	}
 	return -1;
+}
+
+const void ProduceManager::List() const
+{
+	for (auto p : m_produce)
+	{
+		std::cout << p->GetProduceName() << " " << p->GetProduceQuantity() << std::endl;
+	}
+}
+const void ProduceManager::ListHisto() const
+{
+	for (auto p : m_produce)
+	{
+		std::cout << p->GetProduceName() << " " << GetAsteriks(p->GetProduceQuantity()) << std::endl;
+	}
 }

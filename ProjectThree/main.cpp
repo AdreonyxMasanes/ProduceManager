@@ -12,4 +12,9 @@ int main()
 	std::string produceToFind = "Onions";
 	// Print Out produce information
 	std::cout << "Onions in stock: " << produceManager.Find(produceToFind) << std::endl;
+	std::cout << "----------------------------------------------------" << std::endl;
+	produceManager.List();
+	std::cout << "----------------------------------------------------" << std::endl;
+	produceManager.ListHisto();
+
 }
