@@ -1,5 +1,5 @@
 #include "ProduceManager.h"
-
+#include <stdlib.h>
 int main()
 {
 	// File With Producec
@@ -10,6 +10,7 @@ int main()
   int userInput;
   do 
   {
+    system("CLS");
     // print menu
     std::cout << "Welcome to my produce manager!" << std::endl;
     std::cout << "Please choose an option from below: " << std::endl;
@@ -19,9 +20,11 @@ int main()
     std::cout << "Menu option 4: Quit." << std::endl;
     std::cout << "Please Enter a number for your choice: ";
 
+    // Userinput
     std::cin >> userInput;
     switch (userInput) 
     {
+      // Find item
       case 1:
       {
         std::cout << "Enter a item to look for: " << std::endl;
@@ -38,20 +41,24 @@ int main()
           break;
         }
       }
+      //List items
       case 2:
       {
         produceManager.List();
         break;
       }
+      // List as a Histogram
       case 3:
       {
         produceManager.ListHisto();
         break;
       }
+      // Quit
       case 4:
       {
         std::cout << "Goodbye!" << std::endl;
       }
+      // Bad input
       default:
       {
         std::cout << "Please enter a valid option. Returning to menu" << std::endl;
