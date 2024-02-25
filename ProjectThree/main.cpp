@@ -33,7 +33,7 @@ int main()
         int itemQuantity = produceManager.Find(item);
         if( itemQuantity == -1)
         {
-          std::cout << "Item was not found. Returning to menu." << std::endl;
+          std::cout << " Item was not found. Returning to menu." << std::endl;
         }
         else 
         {
