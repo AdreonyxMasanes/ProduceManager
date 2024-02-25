@@ -22,6 +22,7 @@ int main()
 
     // Userinput
     std::cin >> userInput;
+    system("CLS");
     switch (userInput) 
     {
       // Find item
@@ -37,7 +38,7 @@ int main()
         }
         else 
         {
-          std::cout << item << " Quantity: " << itemQuantity << std::endl;
+          std::cout << "Quantity: " << itemQuantity << std::endl;
         }
         break;
       }
@@ -57,6 +58,7 @@ int main()
       case 4:
       {
         std::cout << "Goodbye!" << std::endl;
+        break;
       }
       // Bad input
       default:

@@ -13,7 +13,7 @@ void ProduceManager::LoadProduce()
 			// convert to lowercase
 			for (int i = 0; i < produceName.size(); i++)
 			{
-				putchar(std::tolower(produceName[i]));
+				produceName[i] = std::tolower(produceName[i]);
 			}
 
 			bool alreadyExist = false;
@@ -41,6 +41,12 @@ void ProduceManager::LoadProduce()
 	{
 		std::cout << "The file could not be opened" << std::endl;
 	}
+	// Backup file
+	std::ofstream backup("frequency.dat");
+	for (auto p : m_produce)
+	{
+		backup << p->GetProduceName() << " " << std::to_string(p->GetProduceQuantity()) << std::endl;
+	}
 }
 
 std::string ProduceManager::GetAsteriks(int numOfAsteriks) const
@@ -59,12 +65,12 @@ ProduceManager::ProduceManager(std::string& fileName)
 	LoadProduce();
 }
 
-const int ProduceManager::Find(std::string& produceName)
+const int ProduceManager::Find(std::string produceName)
 {
 	// convert to lowercase
 	for (int i = 0; i < produceName.size(); i++)
 	{
-		putchar(std::tolower(produceName[i]));
+		produceName[i] = std::tolower(produceName[i]);
 	}
 
 	// Auto is a std::shared_ptr<Produce>

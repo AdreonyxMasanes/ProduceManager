@@ -3,6 +3,7 @@
 #include <fstream>
 #include <memory>
 #include <cstring>
+#include <string>
 class ProduceManager
 {
 	private:
@@ -16,7 +17,7 @@ class ProduceManager
 		// Create a manager
 		ProduceManager(std::string& fileName);
 		// Find produce Quantity based on name
-		const int Find(std::string& produceName);
+		const int Find(std::string produceName);
 		const void List() const;
 		const void ListHisto() const;
 };
