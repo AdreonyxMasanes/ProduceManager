@@ -38,8 +38,8 @@ int main()
         else 
         {
           std::cout << item << " Quantity: " << itemQuantity << std::endl;
-          break;
         }
+        break;
       }
       //List items
       case 2:
@@ -65,5 +65,6 @@ int main()
       }
     }
 
+    system("Pause");
   }while (userInput != 4); 
 }
