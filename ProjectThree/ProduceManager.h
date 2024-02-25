@@ -2,6 +2,7 @@
 #include <vector>
 #include <fstream>
 #include <memory>
+#include <cstring>
 class ProduceManager
 {
 	private:
