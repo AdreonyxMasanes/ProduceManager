@@ -10,11 +10,11 @@ void ProduceManager::LoadProduce()
 		while (file >> produceName)
 		{
 
-      // convert to lowercase
-      for(char c : produceName)
-      {
-        putchar(std::tolower(c));
-      }
+			// convert to lowercase
+			for(char c : produceName)
+			{
+				putchar(std::tolower(produceName[c]));
+			}
     
 
 			bool alreadyExist = false;
@@ -65,7 +65,7 @@ const int ProduceManager::Find(std::string& produceName)
   // convert to lowercase
   for(char c : produceName)
   {
-    putchar(std::tolower(c));
+    putchar(std::tolower(produceName[c]));
   }
 
 	// Auto is a std::shared_ptr<Produce>
