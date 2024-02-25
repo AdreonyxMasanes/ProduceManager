@@ -11,11 +11,10 @@ void ProduceManager::LoadProduce()
 		{
 
 			// convert to lowercase
-			for(char c : produceName)
+			for (int i = 0; i < produceName.size(); i++)
 			{
-				putchar(std::tolower(produceName[c]));
+				putchar(std::tolower(produceName[i]));
 			}
-    
 
 			bool alreadyExist = false;
 			for (auto p : m_produce)
@@ -62,11 +61,11 @@ ProduceManager::ProduceManager(std::string& fileName)
 
 const int ProduceManager::Find(std::string& produceName)
 {
-  // convert to lowercase
-  for(char c : produceName)
-  {
-    putchar(std::tolower(produceName[c]));
-  }
+	// convert to lowercase
+	for (int i = 0; i < produceName.size(); i++)
+	{
+		putchar(std::tolower(produceName[i]));
+	}
 
 	// Auto is a std::shared_ptr<Produce>
 	for (auto p : m_produce)
