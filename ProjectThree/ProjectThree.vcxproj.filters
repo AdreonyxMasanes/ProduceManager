@@ -34,6 +34,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ProduceList.txt" />
+    <Text Include="ProduceList.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
